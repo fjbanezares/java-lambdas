@@ -30,6 +30,10 @@ class Message {
         return content;
     }
 
+    static Message upperCaseMessage(Message message) {
+      return  new Message(message.getId(), message.getTimestamp(), message.getContent().toUpperCase());
+    }
+
     @Override
     public String toString() {
         return "Message("+id.toString()+","+timestamp.toString()+","+ content +")";
